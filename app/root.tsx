@@ -37,13 +37,6 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   });
   const domainUrl = process.env.DOMAIN_URL!; //este es el local host que a posteriori será la URL del deploy
 
-  //.log("session root:", session);
-
-  //console.log("headers root:", headers);
-
-  //***********const env = getSupabaseEnv();
-  //*********console.log("env root:", env);
-
   return json(
     {
       env: getSupabaseEnv(),
@@ -62,7 +55,6 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export default function App() {
   const { env, session, domainUrl } = useLoaderData<typeof loader>(); //we grab the data from the loader
-
   //we create a browser client, then we pass it in the context of remix, we grab the data in the components using useOutletContext hook
   const { supabase } = useSupabase({ env, session });
   const theme = useTheme();
