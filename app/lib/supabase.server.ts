@@ -60,5 +60,4 @@ export async function getSupabaseWithSessionAndHeaders({
   //********** */ console.log("supabase server session:", session);
 
   return { session, headers, supabase };
-  return null;
 }

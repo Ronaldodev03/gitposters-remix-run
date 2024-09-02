@@ -2,7 +2,7 @@
 import { createBrowserClient } from "@supabase/ssr"; //for creating browser client
 import type { Session, SupabaseClient } from "@supabase/supabase-js"; //types for ts
 import { useEffect, useState } from "react";
-import type { Database } from "database.types"; //type fot ts
+import type { Database } from "database.types"; //type for ts
 import { useRevalidator } from "@remix-run/react";
 
 //type para la data que viene de supabase
