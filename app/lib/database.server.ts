@@ -52,7 +52,7 @@ export async function getPostWithDetailsById({
     .select(
       "*, author: profiles(*), likes(user_id), comments(*, author: profiles(username, avatar_url))"
     )
-    .order("created_at", { foreignTable: "comments", ascending: false })
+    .order("created_at", { foreignTable: "comments", ascending: true })
     .eq("id", postId);
 
   if (error) {
