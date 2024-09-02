@@ -35,7 +35,8 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   const { session, headers } = await getSupabaseWithSessionAndHeaders({
     request,
   });
-  const domainUrl = process.env.DOMAIN_URL!; //este es el local host que a posteriori será la URL del deploy
+  // const domainUrl = process.env.DOMAIN_URL!; //este es el local host que a posteriori será la URL del deploy
+  const domainUrl = `https://gitposters-remix-run.vercel.app/`;
 
   return json(
     {
