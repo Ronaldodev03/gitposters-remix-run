@@ -31,8 +31,8 @@ export function AuthForm() {
       password,
     });
 
-    console.log("Sign in ", data, error);
-    console.log(email);
+    //console.log("Sign in ", data, error);
+    //console.log(email);
     if (error) {
       // Show error toast
       toast.error(error?.message || "An unknown error occured during login");
@@ -94,7 +94,7 @@ export function AuthForm() {
             <div className="space-y-1">
               <Label htmlFor="name">Name</Label>
               <Input
-                id="text"
+                id="name"
                 type="text"
                 placeholder="Display Name"
                 value={name}
@@ -104,7 +104,7 @@ export function AuthForm() {
             <div className="space-y-1">
               <Label htmlFor="username">Github Username</Label>
               <Input
-                id="text"
+                id="username"
                 type="text"
                 placeholder="Github Username"
                 value={githubUsername}
@@ -146,21 +146,21 @@ export function AuthForm() {
           </CardHeader>
           <CardContent className="space-y-2">
             <div className="space-y-1">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email-login">Email</Label>
               <Input
-                id="email"
+                id="email-login"
                 type="email"
                 placeholder="m@example.com"
-                value={email || "rjsalazary@estudiante.unexpo.edu.ve"}
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="space-y-1">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password-login">Password</Label>
               <Input
-                id="password"
-                // type="password"
-                value={password || "456456456Aa#"}
+                id="password-login"
+                type="password"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>

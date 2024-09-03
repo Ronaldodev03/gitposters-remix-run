@@ -9,7 +9,7 @@ import { useToast } from "@/components/ui/use-toast";
 
 export function Login() {
   const { supabase, domainUrl } = useOutletContext<SupabaseOutletContext>();
-  console.log(domainUrl);
+  //console.log(domainUrl);
   const { toast } = useToast();
   const handleSignIn = async () => {
     const {
