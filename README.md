@@ -1,4 +1,4 @@
-# CODE-CRAFT
+# gitposter
 
 ![gitpoter](gitposterImg.png)
 
