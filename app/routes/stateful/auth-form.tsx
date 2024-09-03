@@ -32,7 +32,7 @@ export function AuthForm() {
     });
 
     console.log("Sign in ", data, error);
-
+    console.log(email);
     if (error) {
       // Show error toast
       toast.error(error?.message || "An unknown error occured during login");
@@ -151,7 +151,7 @@ export function AuthForm() {
                 id="email"
                 type="email"
                 placeholder="m@example.com"
-                value={email}
+                value={email || "rjsalazary@estudiante.unexpo.edu.ve"}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -159,8 +159,8 @@ export function AuthForm() {
               <Label htmlFor="password">Password</Label>
               <Input
                 id="password"
-                type="password"
-                value={password}
+                // type="password"
+                value={password || "456456456Aa#"}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
